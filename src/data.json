@@ -1,0 +1,234 @@
+{
+  "searchCategories": [
+    {
+      "name": "All",
+      "id": 1
+    },
+    {
+      "name": "Mobiles",
+      "id": 2
+    },
+    {
+      "name": "Laptops",
+      "id": 3
+    },
+    {
+      "name": "Mobile Accessories",
+      "id": 4
+    }
+  ],
+
+  "navList": [
+    {
+      "title": "All",
+      "id": 1
+    },
+    {
+      "title": "Todays Deals",
+      "id": 2
+    },
+    {
+      "title": "Customer Service",
+      "id": 3
+    },
+    {
+      "title": "Registry",
+      "id": 4
+    },
+    {
+      "title": "Gift Cards",
+      "id": 5
+    },
+    {
+      "title": "Sell",
+      "id": 6
+    }
+  ],
+
+  "products": [
+    {
+      "id": 11,
+      "img_url": "./images/acer.avif",
+      "title": "Acer",
+      "price": 9000,
+      "added_price": 99,
+      "prev_price": 10000,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
+      "rate": 1.752
+    },
+    {
+      "id": 22,
+      "img_url": "./images/iphone.avif",
+      "title": "Iphone",
+      "price": 1080,
+      "added_price": 99,
+      "prev_price": 12000,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
+      "rate": 1.791
+    },
+    {
+      "id": 33,
+      "img_url": "./images/mac.avif",
+      "title": "Mac",
+      "price": 22500,
+      "added_price": 99,
+      "prev_price": 25000,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
+      "rate": 1.812
+    },
+    {
+      "id": 44,
+      "img_url": "./images/samsungS22.avif",
+      "title": "Samsung S22",
+      "price": 90,
+      "added_price": 99,
+      "prev_price": 100,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
+      "rate": 1.831
+    },
+    {
+      "id": 55,
+      "img_url": "./images/iphone-case.avif",
+      "title": "Iphone Case",
+      "price": 45,
+      "added_price": 99,
+      "prev_price": 50,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
+      "rate": 1.221
+    },
+    {
+      "id": 66,
+      "img_url": "./images/iphone-case2.avif",
+      "title": "Iphone Case",
+      "price": 11304,
+      "added_price": 99,
+      "prev_price": 12500,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
+      "rate": 1.874
+    }
+  ],
+
+  "footer_data": [
+    {
+      "Get To Know Us": [
+        {
+          "id": 1,
+          "title": "Careers"
+        },
+        {
+          "id": 2,
+          "title": "Blog"
+        },
+        {
+          "id": 3,
+          "title": "About Amazon"
+        },
+        {
+          "id": 4,
+          "title": "Investor Relations"
+        },
+        {
+          "id": 5,
+          "title": "Amazon Devices"
+        },
+        {
+          "id": 6,
+          "title": "Amazon Science"
+        }
+      ],
+
+      "Make Money With Us" : [
+        {
+          "id": 1,
+          "title": "Sell products on Amazon"
+        },
+        {
+          "id": 2,
+          "title": "Sell on Amazon Business"
+        },
+        {
+          "id": 3,
+          "title": "Sell apps on Amazon"
+        },
+        {
+          "id": 4,
+          "title": "Become an Affiliate"
+        },
+        {
+          "id": 5,
+          "title": "Advertise Your Products"
+        },
+        {
+          "id": 6,
+          "title": "Self-Publish with Us"
+        },
+        {
+          "id": 7,
+          "title": "Host an Amazon Hubs"
+        },
+        {
+          "id": 8,
+          "title": "See More Make Money with Us"
+        }
+      ],
+
+      "Amazon Payment Products" : [
+        {
+          "id": 1,
+          "title": "Amazon Business Card"
+        },
+        {
+          "id": 2,
+          "title": "Shop with Points"
+        },
+        {
+          "id": 3,
+          "title": "Reload Your Balance"
+        },
+        {
+          "id": 4,
+          "title": "Amazon Currency Converter"
+        }
+      ],
+
+      "Let Us Help You": [
+        {
+          "id": 1,
+          "title": "Amazon and COVID-19"
+        },
+        {
+          "id": 2,
+          "title": "Your Account"
+        },
+        {
+          "id": 3,
+          "title": "Your Orders"
+        },
+        {
+          "id": 4,
+          "title": "Shipping Rates & Policies"
+        },
+        {
+          "id": 5,
+          "title": "Shipping Rates & Policies"
+        },
+        {
+          "id": 6,
+          "title": "Returns & Replacements"
+        },
+        {
+          "id": 7,
+          "title": "Manage Your Content and Devices"
+        },
+        {
+          "id": 8,
+          "title": "Amazon Assistant"
+        },
+        {
+          "id": 9,
+          "title": "Help"
+        }
+      ]
+    }
+  ]
+}

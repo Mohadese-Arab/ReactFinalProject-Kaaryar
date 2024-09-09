@@ -1,0 +1,41 @@
+.footer {
+  .backToTopBtn {
+    height: 46px;
+    background-color: #3a4352;
+    color: var(--bg-light);
+    cursor: pointer;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .footerContent {
+    background-color: var(--bg-dark-blue);
+    padding: 40px 180px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 2px solid #d4d8de;
+
+    ul {
+        gap: 5px;
+        p {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        li {
+            a {
+                color: #CBD5E1;
+                text-decoration: none;
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+  }
+}

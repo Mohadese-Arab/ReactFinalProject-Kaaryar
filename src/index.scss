@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e2e6e7;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* colors root */
+:root {
+  --dark-bg: #121921;
+  --bg-light: #f1f4f9;
+  --bg-dark-blue: #232f3f;
+  --primary-color: #f59802;
+}
+
+/* sizes root */
+:root {
+  --small-pd: 4px
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.mySwiper {
+  .swiper-button-prev, .swiper-button-next {
+    top: 20%;
+    color: var(--dark-bg);
+  } 
+}

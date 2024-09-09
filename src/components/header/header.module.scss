@@ -1,0 +1,159 @@
+.header {
+  height: 60px;
+  background-color: var(--dark-bg);
+  padding: var(--small-pd);
+
+  .deliverInfoBox {
+    color: white;
+    margin-right: 12px;
+    padding: 8px 8px 8px 0;
+    .deliverInfo {
+      span {
+        font-size: 12px;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .searchBox {
+    width: 890px;
+    height: 40px;
+
+    form {
+      background-color: var(--bg-light);
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 85px 1fr 40px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      select {
+        background-color: #e6e6e6;
+        padding: 4px 10px 4px 10px;
+        border: none;
+        outline: none;
+        border-right: 1px solid #333;
+      }
+
+      input {
+        background-color: transparent;
+        padding: 4px;
+        font-size: 0.9rem;
+        border: none;
+        outline: none;
+      }
+
+      button {
+        padding: 4px;
+        background-color: var(--primary-color);
+        border-radius: 0 4px 4px 0;
+        border: none;
+        outline: none;
+
+        .searchIcon {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .selectLngBox {
+    width: 84px;
+    height: 50px;
+    padding: 8px;
+    margin: 0 5px 0 16px;
+    gap: 10px;
+    cursor: pointer;
+
+    .flagWrapper {
+      img {
+        width: 25px;
+      }
+    }
+
+    .selectLng {
+      color: white;
+    }
+  }
+
+  .accountListsBox {
+    color: white;
+    padding: 4px;
+    span {
+      font-size: 12px;
+    }
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+  .returnOrderBox {
+    color: white;
+    padding: 4px;
+    span {
+      font-size: 12px;
+    }
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+  .cartBox {
+    height: 50px;
+    width: 80px;
+    padding: 2px;
+
+    .cartIconWrapper {
+      position: relative;
+      span {
+        color: var(--primary-color);
+        font-size: 18px;
+        position: absolute;
+        left: 27px;
+      }
+
+      img {
+        width: 60px;
+        color: transparent;
+        align-self: center;
+      }
+    }
+
+    p {
+      color: white;
+      font-weight: bold;
+      align-self: flex-end;
+      margin-left: -12px;
+    }
+  }
+}
+
+nav {
+  height: 37px;
+  background-color: var(--bg-dark-blue);
+  ul {
+    height: 100%;
+    gap: 8px;
+    margin-left: 12px;
+
+    li {
+      gap: 6px;
+      color: white;
+      padding: 8px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid white;
+      }
+    }
+  }
+}
