@@ -38,4 +38,42 @@
         }
     }
   }
+
+  .footerBottom {
+    height: 75px;
+    padding: 10px;
+    background-color: var(--bg-dark-blue);
+    gap: 10px;
+    .logo {
+      width: 116px;
+      height: 57px;
+    }
+    .infoWrapper {
+      gap: 10px;
+      .infoItem {
+        color: #CBD5E1;
+        width: fit-content;
+        height: 35px;
+        padding: 5px;
+        margin: 2px;
+        border: 1px solid #d4d8de;
+        border-radius: 3px;
+        gap: 4px;
+        cursor: pointer;
+      }
+
+      .currency {
+        .currencyIcon {
+          font-size: 18px;
+          color: white;
+        }
+      }
+
+      .country {
+        .usaFlag {
+          width: 22px;
+        }
+      }
+    }
+  }
 }
