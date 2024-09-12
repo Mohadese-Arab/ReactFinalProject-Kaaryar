@@ -19,7 +19,7 @@ const HomeContent = () => {
       </header>
       <main className={classes.main}>
         {data.products.map((product, i) => (
-          <section className="d-flex justify-center flex-column">
+          <section key={i} className="d-flex justify-center flex-column">
             <div
               className={`${classes.imageWrapper} d-flex align-center justify-center`}
             >

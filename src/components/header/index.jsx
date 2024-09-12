@@ -10,11 +10,31 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import classes from "./header.module.scss";
 import { useState } from "react";
+import BurgerMenu from "../burgerMenu";
+import ChooseLng from "../chooseLng";
 
 const Header = () => {
   const { searchCategories } = data;
 
   const [shopCount, setShopCount] = useState(0);
+  const [toggleBurgerMenu, setToggleBurgerMenu] = useState(false);
+  const [showLngList, setShowLngList] = useState(false);
+
+  // open burger manu function handler //
+  const navClickHandler = (id) => {
+    if (id === 1) {
+      setToggleBurgerMenu(!toggleBurgerMenu);
+    }
+  };
+
+  // open and close select lng
+  const openChooseLng = () => {
+    setShowLngList(true);
+  };
+
+  const closeChooseLng = () => {
+    setShowLngList(false);
+  };
 
   return (
     <>
@@ -53,6 +73,8 @@ const Header = () => {
 
         <div
           className={`${classes.selectLngBox} d-flex align-center justify-center`}
+          onMouseEnter={openChooseLng}
+          onMouseLeave={closeChooseLng}
         >
           <div className={`${classes.flagWrapper}`}>
             <img src={flagImg} alt="usa-flag" />
@@ -61,6 +83,8 @@ const Header = () => {
             <span>EN</span>
             <IoMdArrowDropdown />
           </div>
+
+           { showLngList && <ChooseLng openChooseLng={openChooseLng} closeChooseLng={closeChooseLng} />}
         </div>
 
         <div className={`${classes.accountListsBox}`}>
@@ -89,13 +113,22 @@ const Header = () => {
       <nav>
         <ul className="d-flex align-center">
           {data.navList.map((item) => (
-            <li key={item.id} className="d-flex align-center">
+            <li
+              key={item.id}
+              className="d-flex align-center"
+              onClick={() => navClickHandler(item.id)}
+            >
               {item.id === 1 ? <GiHamburgerMenu /> : null}
               <span>{item.title}</span>
             </li>
           ))}
         </ul>
       </nav>
+
+      <BurgerMenu
+        toggleBurgerMenu={toggleBurgerMenu}
+        setToggleBurgerMenu={setToggleBurgerMenu}
+      />
     </>
   );
 };

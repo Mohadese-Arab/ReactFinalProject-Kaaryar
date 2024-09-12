@@ -230,5 +230,126 @@
         }
       ]
     }
+  ],
+
+  "menuList" : [
+    {
+      "Digital Content & Devices" : [
+        {
+          "id": 1,
+          "title": "Amazon Music"
+        },
+        {
+          "id": 2,
+          "title": "Kindle E-Readers & Books"
+        },
+        {
+          "id": 3,
+          "title": "Amazon Appstore"
+        }
+      ],
+      "Shop by Department": [
+        {
+          "id": 4,
+          "title": "Electronics"
+        },
+        {
+          "id": 5,
+          "title": "Computer"
+        },
+        {
+          "id": 6,
+          "title": "Smart Home"
+        },
+        {
+          "id": 7,
+          "title": "Arts & Crafts"
+        },
+        {
+          "id": 8,
+          "title": "See All"
+        }
+      ],
+      "Programs & Features" : [
+        {
+          "id": 9,
+          "title": "Gift Cards"
+        },
+        {
+          "id": 10,
+          "title": "Shop By Interest"
+        },
+        {
+          "id": 11,
+          "title": "Amazon Live"
+        },
+        {
+          "id": 12,
+          "title": "International Shopping"
+        },
+        {
+          "id": 13,
+          "title": "See All"
+        }
+      ],
+      "Help & Settings": [
+        {
+          "id": 14,
+          "title": "Your Account"
+        },
+        {
+          "id": 15,
+          "title": "English"
+        },
+        {
+          "id": 16,
+          "title": "United States"
+        },
+        {
+          "id": 17,
+          "title": "Customer Service"
+        },
+        {
+          "id": 18,
+          "title": "Sign In"
+        }
+
+      ]
+    }
+  ],
+
+  "languages": [
+    {
+      "id": 1,
+      "name": "English - EN"
+    },
+    {
+      "id": 2,
+      "name": "español - ES"
+    },
+    {
+      "id": 3,
+      "name": "العربية - AR"
+    },
+    {
+      "id": 4,
+      "name": "Deutsch - DE"
+    },
+    {
+      "id": 5,
+      "name": "עברית - HE"
+    },
+    {
+      "id": 6,
+      "name": "한국어 - KO"
+    },
+    {
+      "id": 7,
+      "name": "português - PT"
+    },
+    {
+      "id": 8,
+      "name": "中文 (简体) - ZH"
+    }
   ]
 }

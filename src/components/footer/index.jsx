@@ -6,12 +6,21 @@ import { BsGlobe2 } from "react-icons/bs";
 import { TbCurrencyDollar } from "react-icons/tb";
 
 import data from "../../data.json";
+import { useRef } from "react";
 
 const Footer = () => {
+  
+  const backToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
   return (
     <footer className={classes.footer}>
       <div
         className={`${classes.backToTopBtn} d-flex align-center justify-center`}
+        onClick={backToTop}
       >
         <p>Back to top</p>
       </div>

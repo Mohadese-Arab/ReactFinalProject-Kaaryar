@@ -1,0 +1,64 @@
+.container {
+  background-color: #fff;
+  width: 280px;
+  padding: 12px;
+  border-radius: 4px;
+  position: absolute;
+  top: 14%;
+  right: 12%;
+  z-index: 100;
+
+  .header {
+    margin-bottom: 24px;
+    gap: 8px;
+
+    p {
+      font-size: 13px;
+    }
+
+    a {
+      font-size: 13px;
+      text-decoration: none;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .main {
+    section {
+      padding: 10px 0;
+      border-bottom: 2px solid #ddd;
+      ul {
+        gap: 8px;
+        li {
+          gap: 6px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .footer {
+    gap: 20px;
+    .footerTop {
+        width: 100%;
+        gap: 8px;
+      div {
+        width: 25px;
+      }
+    }
+
+    a {
+        align-self: center;
+    }
+  }
+}

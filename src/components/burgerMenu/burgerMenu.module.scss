@@ -1,0 +1,98 @@
+.mainMenu {
+  background-color: white;
+  width: 365px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  
+  &.open {
+    transform: translateX(0);
+  }
+
+  &.closed {
+    transform: translateX(-100%);
+  }
+
+  .header {
+    background-color: var(--bg-dark-blue);
+    width: 365px;
+    height: 55px;
+    color: white;
+    font-size: 18px;
+    padding: 8px 8px 8px 30px;
+    gap: 6px;
+    position: fixed;
+    top: 0;
+
+    .userIcon {
+      font-size: 22px;
+    }
+  }
+
+  .main {
+    height: calc(100vh - 55px);
+    overflow-y: scroll;
+    position: relative;
+    top: 55px;
+    section {
+      border-bottom: 2px solid #ebebeb;
+      p {
+        padding: {
+          top: 24px;
+          right: 32px;
+          left: 32px;
+          bottom: 8px;
+        }
+      }
+      ul {
+        li {
+          padding: 12px 32px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #ebebeb;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes open {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes close {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes close {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
