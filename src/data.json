@@ -54,7 +54,8 @@
       "added_price": 99,
       "prev_price": 10000,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
-      "rate": 1.752
+      "ratePeople": "1,752",
+      "rate": 4.6
     },
     {
       "id": 22,
@@ -64,7 +65,8 @@
       "added_price": 99,
       "prev_price": 12000,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
-      "rate": 1.791
+      "ratePeople": "1,791",
+      "rate": 4.8
     },
     {
       "id": 33,
@@ -74,7 +76,8 @@
       "added_price": 99,
       "prev_price": 25000,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
-      "rate": 1.812
+      "ratePeople": "1,812",
+      "rate": 4.1
     },
     {
       "id": 44,
@@ -84,7 +87,8 @@
       "added_price": 99,
       "prev_price": 100,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
-      "rate": 1.831
+      "ratePeople": "1,831",
+      "rate": 4.8
     },
     {
       "id": 55,
@@ -94,7 +98,8 @@
       "added_price": 99,
       "prev_price": 50,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
-      "rate": 1.221
+      "ratePeople": "1,221",
+      "rate": 3.8
     },
     {
       "id": 66,
@@ -104,7 +109,8 @@
       "added_price": 99,
       "prev_price": 12500,
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident a aperiam quo unde aspernatur culpa nobis eaque sit corporis laborum, est veniam assumenda impedit id, tempora corrupti quia maiores distinctio!",
-      "rate": 1.874
+      "ratePeople": "1,874",
+      "rate": 4
     }
   ],
 
@@ -137,7 +143,7 @@
         }
       ],
 
-      "Make Money With Us" : [
+      "Make Money With Us": [
         {
           "id": 1,
           "title": "Sell products on Amazon"
@@ -172,7 +178,7 @@
         }
       ],
 
-      "Amazon Payment Products" : [
+      "Amazon Payment Products": [
         {
           "id": 1,
           "title": "Amazon Business Card"
@@ -232,9 +238,9 @@
     }
   ],
 
-  "menuList" : [
+  "menuList": [
     {
-      "Digital Content & Devices" : [
+      "Digital Content & Devices": [
         {
           "id": 1,
           "title": "Amazon Music"
@@ -270,7 +276,7 @@
           "title": "See All"
         }
       ],
-      "Programs & Features" : [
+      "Programs & Features": [
         {
           "id": 9,
           "title": "Gift Cards"
@@ -313,7 +319,6 @@
           "id": 18,
           "title": "Sign In"
         }
-
       ]
     }
   ],
@@ -350,6 +355,64 @@
     {
       "id": 8,
       "name": "中文 (简体) - ZH"
+    }
+  ],
+
+  "productStyle": [
+    {
+      "Brand": "acre",
+      "Model Name": "Laptop",
+      "Screen Size": "15.6 inches",
+      "Color": "Silver",
+      "Hard Disk Size": "128GB",
+      "CPU Model": "Ryzen 3",
+      "Ram Memory Installed Size": "8GB",
+      "Operating System": "Windows 11 S",
+      "Special Feature": "Backlit Keyboard",
+      "Graphics Card Description": "Integrated"
+    }
+  ],
+
+  "aboutItems": [
+    {
+      "id": 1,
+      "desc": "Purposeful Design: Travel with ease and look great doing it with the Aspire's 3 thin, light design."
+    },
+    {
+      "id": 2,
+      "desc": "Ready-to-Go Performance: The Aspire 3 is ready-to-go with the latest AMD Ryzen 3 7320U Processor with Radeon Graphics—ideal for the entire family, with performance and productivity at the core."
+    },
+    {
+      "id": 3,
+      "desc": "Visibly Stunning: Experience sharp details and crisp colors on the 15.6' Full HD IPS display with 16:9 aspect ratio and narrow bezels"
+    },
+    {
+      "id": 4,
+      "desc": "Internal Specifications: 8GB LPDDR5 Onboard Memory; 128GB NVMe solid-state drive storage to store your files and media"
+    },
+    {
+      "id": 5,
+      "desc": "The HD front-facing camera uses Acer’s TNR (Temporal Noise Reduction) technology for high-quality imagery in low-light conditions. Acer PurifiedVoice technology with AI Noise Reduction filters out any extra sound for clear communication over online meetings."
+    },
+    {
+      "id": 6,
+      "desc": "Wireless Wi-Fi 6 Convenience: Maintain a strong, consistent wireless signal with Wi-Fi 6 (aka 802.11ax) and 2x2 MU-MIMO technology."
+    },
+    {
+      "id": 7,
+      "desc": "Improved Thermals: With a 78% increase in fan surface area, enjoy an improved thermal system and an additional 17% thermal capacity. Allowing for longer, more efficient work sessions while not plugged in."
+    },
+    {
+      "id": 8,
+      "desc": "Ports For All Your Accessories: 1 - USB Type-C Port USB 3.2 Gen 2 (up to 10 Gbps) DisplayPort over USB Type-C & USB Charging, 2 - USB 3.2 Gen 1 Ports, 1 - HDMI 2.1 Port with HDCP support, 1 - Headphone/Speaker/Line-Out Jack, DC-in for AC adapter"
+    },
+    {
+      "id": 9,
+      "desc": "What's In the Box: Acer Aspire Laptop, AC Adapter, Power Cord"
+    },
+    {
+      "id": 10,
+      "desc": "Keyboard backlight not present on this model"
     }
   ]
 }
