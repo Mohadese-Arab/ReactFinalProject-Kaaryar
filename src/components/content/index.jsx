@@ -36,7 +36,7 @@ const HomeContent = () => {
                 <p className={classes.oldPrice}>${product.prev_price}</p>
               </div>
               <div className={classes.productDescBox}>
-                <p>{product.desc}</p>
+                <p>{`${product.desc.slice(0, 80)}...`}</p>
               </div>
               <div className={`${classes.rateBox} d-flex align-center`}>
                 <FaStar className={classes.starIcon} />
@@ -44,7 +44,7 @@ const HomeContent = () => {
                 <FaStar className={classes.starIcon} />
                 <FaStar className={classes.starIcon} />
                 <FaStar className={classes.starIcon} />
-                <span>{product.rate}</span>
+                <span>{product.ratePeople}</span>
               </div>
               <Link to={`/product/${product.id}`}>See More ...</Link>
             </div>

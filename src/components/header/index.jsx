@@ -12,11 +12,10 @@ import classes from "./header.module.scss";
 import { useState } from "react";
 import BurgerMenu from "../burgerMenu";
 import ChooseLng from "../chooseLng";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ shopCount }) => {
   const { searchCategories } = data;
-
-  const [shopCount, setShopCount] = useState(0);
   const [toggleBurgerMenu, setToggleBurgerMenu] = useState(false);
   const [showLngList, setShowLngList] = useState(false);
 
@@ -25,15 +24,6 @@ const Header = () => {
     if (id === 1) {
       setToggleBurgerMenu(!toggleBurgerMenu);
     }
-  };
-
-  // open and close select lng
-  const openChooseLng = () => {
-    setShowLngList(true);
-  };
-
-  const closeChooseLng = () => {
-    setShowLngList(false);
   };
 
   return (
@@ -73,8 +63,8 @@ const Header = () => {
 
         <div
           className={`${classes.selectLngBox} d-flex align-center justify-center`}
-          onMouseEnter={openChooseLng}
-          onMouseLeave={closeChooseLng}
+          onMouseEnter={() => setShowLngList(true)}
+          onMouseLeave={() => setShowLngList(false)}
         >
           <div className={`${classes.flagWrapper}`}>
             <img src={flagImg} alt="usa-flag" />
@@ -84,7 +74,7 @@ const Header = () => {
             <IoMdArrowDropdown />
           </div>
 
-           { showLngList && <ChooseLng openChooseLng={openChooseLng} closeChooseLng={closeChooseLng} />}
+          {showLngList && <ChooseLng setShowLngList={setShowLngList} />}
         </div>
 
         <div className={`${classes.accountListsBox}`}>
@@ -102,13 +92,15 @@ const Header = () => {
           </div>
         </div>
 
-        <div className={`${classes.cartBox} d-flex`}>
-          <div className={`${classes.cartIconWrapper}`}>
-            <span>{shopCount}</span>
-            <img src={cartIcon} alt="cartIcon" />
+        <Link to={'/cart'}>
+          <div className={`${classes.cartBox} d-flex`}>
+            <div className={`${classes.cartIconWrapper}`}>
+              <span>{shopCount}</span>
+              <img src={cartIcon} alt="cartIcon" />
+            </div>
+            <p>Cart</p>
           </div>
-          <p>Cart</p>
-        </div>
+        </Link>
       </header>
       <nav>
         <ul className="d-flex align-center">

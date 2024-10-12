@@ -52,6 +52,10 @@ code {
   justify-content: space-between;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .flex-column {
   flex-direction: column;
 }

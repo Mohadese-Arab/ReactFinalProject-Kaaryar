@@ -14,7 +14,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import ProductImage from "../../components/productImage";
 
-const Product = () => {
+const Product = ({ setShopCount }) => {
   const productId = useParams();
   const [chosenStyle, setChosenStyle] = useState("R3 7320U");
   const [showMore, setShowMore] = useState(false);
@@ -25,7 +25,7 @@ const Product = () => {
   let productDetailes = data.productStyle[0];
   let quantitiy = [];
 
-  for (let i = 0; i < 28; i++) {
+  for (let i = 1; i < 29; i++) {
     quantitiy.push(i);
   }
 
@@ -47,8 +47,22 @@ const Product = () => {
     setChosenStyle(model);
   };
 
+  const addToCartHandler = (product) => {
+    if (product.addedToCart) {
+      let index = data.cartProducts.indexOf(product);
+      data.cartProducts.splice(index, 1)
+      const productsNumber = data.cartProducts.length
+      setShopCount(productsNumber)
+      product.addedToCart = !product.addedToCart
+    } else {
+      data.cartProducts.push(product);
+      const productsNumber = data.cartProducts.length;
+      setShopCount(productsNumber);
+      product.addedToCart = !product.addedToCart;
+    }
+  };
+
   const today = new Date();
-  console.log(today);
 
   return (
     <div className={classes.container}>
@@ -114,16 +128,19 @@ const Product = () => {
             <div className={`${classes.chooseStyleBox} d-flex flex-column`}>
               <div className={`${classes.styleBtnWrapper} d-flex align-center`}>
                 <div
-                  className={`${classes.styleBtn} ${chosenStyle == 'R3 7320U' ? `${classes.active}` : ''}`}
+                  className={`${classes.styleBtn} ${
+                    chosenStyle == "R3 7320U" ? `${classes.active}` : ""
+                  }`}
                   onClick={() => chooseStyleHandler("R3 7320U")}
                 >
                   <p>R3 7320U</p>
                   <span>$299.99</span>
                 </div>
                 <div
-                  className={`${classes.styleBtn} ${chosenStyle == 'R7 5700U' ? `${classes.active}` :'' }`}
+                  className={`${classes.styleBtn} ${
+                    chosenStyle == "R7 5700U" ? `${classes.active}` : ""
+                  }`}
                   onClick={() => chooseStyleHandler("R7 5700U")}
-
                 >
                   <p>R7 5700U</p>
                   <span>$499.99</span>
@@ -210,8 +227,7 @@ const Product = () => {
             <p className={classes.date}>Wednesday, May 15</p>
 
             <p className={classes.deliver}>
-              {" "}
-              <GoLocation /> <a href="#">Deliver to Iran</a>{" "}
+              <GoLocation /> <a href="#">Deliver to Iran</a>
             </p>
 
             <div className={classes.inStockWrapper}>
@@ -226,7 +242,12 @@ const Product = () => {
               </select>
             </div>
 
-            <button className={classes.addBtn}>Add to cart</button>
+            <button
+              className={classes.addBtn}
+              onClick={() => addToCartHandler(product[0])}
+            >
+              {product[0].addedToCart ? `Remove from cart` : `Add to cart`}
+            </button>
 
             <ul className={classes.shippingList}>
               <li className={``}>
@@ -248,12 +269,17 @@ const Product = () => {
                 <span>Payments</span>
                 <p>Secure transaction</p>
               </li>
-              {showShipping && <li>
-                <span>Support</span>
-                <p>Product support included</p>
-              </li>}
+              {showShipping && (
+                <li>
+                  <span>Support</span>
+                  <p>Product support included</p>
+                </li>
+              )}
 
-              <li className={classes.showBtn} onClick={() => setShowShipping(!showShipping)}>
+              <li
+                className={classes.showBtn}
+                onClick={() => setShowShipping(!showShipping)}
+              >
                 {showShipping ? "Show Less" : "Show More"}
               </li>
             </ul>

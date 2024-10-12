@@ -4,12 +4,12 @@ import data from "../../data.json";
 
 import flagImg from "../../assets/images/usaFlag.jpg";
 
-const ChooseLng = ({ openChooseLng, closeChooseLng }) => {
+const ChooseLng = ({setShowLngList}) => {
   return (
     <div
       className={classes.container}
-      onMouseEnter={openChooseLng}
-      onMouseLeave={closeChooseLng}
+      onMouseEnter={() => setShowLngList(true)}
+      onMouseLeave={() => setShowLngList(false)}
     >
       <header className={`${classes.header} d-flex align-center`}>
         <p>Change language</p>
