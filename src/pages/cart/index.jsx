@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const Cart = ({ data }) => {
+const Cart = ({ data, setShopCount }) => {
   const [cartProducts, setCartProducts] = useState([])
+  const [totalPrice, setTotalPrice] = useState(0)
+  const [itemsNumber, setItemsNumber] = useState(0)
   let quantitiy = [];
 
   for (let i = 1; i < 29; i++) {
@@ -13,12 +15,39 @@ const Cart = ({ data }) => {
   }
 
   useEffect(() => {
+    calcTotalPrice()
     setCartProducts(data.cartProducts)
-  }, [cartProducts])
+    setItemsNumber(cartProducts.length)
+  }, [cartProducts, cartProducts.length])
+
+  const deleteProductHandler = (itemId) => {
+    data.cartProducts.map((item) => {
+      if(item.id == itemId) {
+        let index = data.cartProducts.indexOf(item)
+        data.cartProducts.splice(index, 1);
+        setCartProducts(data.cartProducts);
+        setShopCount(data.cartProducts.length);
+        item.addedToCart = false
+      }
+    })
+  }
 
   const deleteAllHandler = () => {
+    data.cartProducts.map((item) => {
+      item.addedToCart = false
+    })
     data.cartProducts.splice(0, data.cartProducts.length)
     setCartProducts([])
+    setShopCount(data.cartProducts.length);
+  }
+
+  const calcTotalPrice = () => {
+    let sum = 0
+    data.cartProducts.map((item) => {
+      sum += item.prev_price
+    })
+
+    setTotalPrice(sum)
   }
 
   return (
@@ -31,9 +60,9 @@ const Cart = ({ data }) => {
               <p onClick={deleteAllHandler}>Deselect all items</p>
             </div>
 
-            {cartProducts.map((item) => (
+            {cartProducts.map((item, i) => (
               <>
-                <div className={classes.content}>
+                <div className={classes.content} key={i}>
                   <div className={classes.imageWrapper}>
                     <img src={item.img_url} alt="" />
                   </div>
@@ -76,7 +105,7 @@ const Cart = ({ data }) => {
                         ))}
                       </select>
 
-                      <span>Delete</span>
+                      <span onClick={() => deleteProductHandler(item.id)} >Delete</span>
                       <span>Save for later</span>
                       <span>See more like this</span>
                       <span>Share</span>
@@ -91,13 +120,13 @@ const Cart = ({ data }) => {
             ))}
             <div className={`${classes.footer} d-flex justify-end`}>
               <p>
-                Subtotal(1 item): <span>$1200</span>{" "}
+                Subtotal({itemsNumber} item): <span>${totalPrice}</span>
               </p>
             </div>
           </section>
           <section className={classes.checkoutProceed}>
-            <h2>Subtotal(1 item)</h2>
-            <p>$100</p>
+            <h2>Subtotal({itemsNumber} item)</h2>
+            <p>${totalPrice}</p>
             <div className={`${classes.giftOption} d-flex align-center`}>
               <input type="checkbox" id="gift" />
               <label htmlFor="gift">

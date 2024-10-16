@@ -18,7 +18,7 @@ function App() {
         <Header shopCount={shopCount} />
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart data={data} />} />
+            <Route path="/cart" element={<Cart data={data} setShopCount={setShopCount} />} />
             <Route path="/product/:id" element={<Product setShopCount={setShopCount} />} />
         </Routes>
         <Footer />
